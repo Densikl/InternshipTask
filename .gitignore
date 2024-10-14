@@ -1,0 +1,8 @@
+finance.db
+path
+.env
+.venv
+__pycache__
+.DS_Store
+Pipfile
+Pipfile.lock
