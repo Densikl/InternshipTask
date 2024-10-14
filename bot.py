@@ -159,11 +159,13 @@ def getInterval(message):
 
     data = getDataInInterval(message.chat.id, interval)
     answer = ''
-    for row in data:
-        answer += f'<b>id:</b> {row[0]}\n<b>категория:</b> {row[2]}\n<b>значение:</b> {row[3] / 100}\n<b>описание:</b> {row[4]}\n\n'
+    if len(data) != 0:
+        for row in data:
+            answer += f'<b>id:</b> {row[0]}\n<b>категория:</b> {row[2]}\n<b>значение:</b> {row[3] / 100}\n<b>описание:</b> {row[4]}\n\n'
+        bot.send_message(message.chat.id, answer, parse_mode='HTML', reply_markup=createDefaultKeyboard())
+    else:
+        bot.send_message(message.chat.id, 'Пока тут пусто', reply_markup=createDefaultKeyboard())
 
-    bot.send_message(message.chat.id, answer, parse_mode='HTML', reply_markup=createDefaultKeyboard())
-    
 
 def deleteBudgetItem(message):
     try:
