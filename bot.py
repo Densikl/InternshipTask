@@ -1,11 +1,10 @@
-import os
 import telebot
 import time
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 from database import *
 
 
-BOT_TOKEN = os.getenv('BOT_TOKEN')
+BOT_TOKEN = 'YOUR_TOKEN_HERE'
 bot = telebot.TeleBot(BOT_TOKEN)
 
 
