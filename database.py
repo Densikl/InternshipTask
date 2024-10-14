@@ -62,15 +62,6 @@ def addCategory(userId, name):
     connection.close()
 
 
-def deleteCategory(cursor, id):
-    # setting up connection here, although its ineffective, 
-    # because this func works in another thread
-    connection, cursor = connectToDatabase()
-    cursor.execute('DELETE FROM categories WHERE id = (?)', (id,))
-    connection.commit()
-    connection.close()
-
-
 def getCategories(userId):
     # setting up connection here, although its ineffective, 
     # because this func works in another thread
