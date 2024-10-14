@@ -7,6 +7,6 @@
 2. открыть директорию InternshipTask-main в терминале
 3. выполнить python -m venv .venv
 4. выполнить pip install -r requirements.txt
-5. создать файл .env и добавить строку BOT_TOKEN = YOUR_TOKEN, где YOUR_TOKEN - токен вашего бота
+5. Заменить YOUR_TOKEN_HERE в bot.py на токен вашего бота
 6. выполнить python initialDatabase.py
 7. выполнить python bot.py
